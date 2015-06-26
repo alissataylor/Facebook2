@@ -1,5 +1,10 @@
 package smoketests;
 
+import login.Login;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 /*
  * @Author John Martin
  * @Summary AddCoverPhoto Test Scenario.
@@ -10,6 +15,14 @@ package smoketests;
  */
 
 public class AddCoverPhoto {
+	
+	//Instantiate a reference driver.
+	WebDriver driver = new FirefoxDriver();
+	
+	//Instantiate the Login PageObject class.
+	Login login = new Login();
+	
+	//Login to the webpage.
 	
 	//Click the 'Update Cover Photo' button.
 	
