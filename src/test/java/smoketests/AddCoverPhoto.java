@@ -16,23 +16,26 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class AddCoverPhoto {
 	
-	//Instantiate a reference driver.
-	WebDriver driver = new FirefoxDriver();
+	//Test scenario for adding a cover photo.
+	public void testAddCoverPhoto(){
+		//Instantiate a reference driver.
+		WebDriver driver = new FirefoxDriver();
+		
+		//Instantiate the Login PageObject class.
+		Login loginPageObject = new Login(driver);
 	
-	//Instantiate the Login PageObject class.
-	Login login = new Login();
-	
-	//Login to the webpage.
-	
-	//Click the 'Update Cover Photo' button.
-	
-	//Click the 'Choose From My Photos' button.
-	
-	//Click the 'Photo Albums' link.
-	
-	//Select the Photo Album.
-	
-	//Select the Photo to be added as a cover photo.
-	
+		
+		//Login to the webpage.
+		
+		//Click the 'Update Cover Photo' button.
+		
+		//Click the 'Choose From My Photos' button.
+		
+		//Click the 'Photo Albums' link.
+		
+		//Select the Photo Album.
+		
+		//Select the Photo to be added as a cover photo.
+	}
 
 }
