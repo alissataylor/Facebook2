@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
@@ -91,4 +92,29 @@ Driver info: driver.version: unknown
       </class>
     </test>
   </suite>
+=======
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="6806" started-at="2015-07-06T16:00:06Z" finished-at="2015-07-06T16:00:13Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="6806" started-at="2015-07-06T16:00:06Z" finished-at="2015-07-06T16:00:13Z">
+      <class name="smoketests.SuccessfulLogin">
+        <test-method status="PASS" signature="setup()[pri:0, instance:smoketests.SuccessfulLogin@8f2ef19]" name="setup" is-config="true" duration-ms="1252" started-at="2015-07-06T12:00:06Z" finished-at="2015-07-06T12:00:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="successfulLoginTest()[pri:0, instance:smoketests.SuccessfulLogin@8f2ef19]" name="successfulLoginTest" duration-ms="4490" started-at="2015-07-06T12:00:08Z" finished-at="2015-07-06T12:00:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- successfulLoginTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:smoketests.SuccessfulLogin@8f2ef19]" name="teardown" is-config="true" duration-ms="1053" started-at="2015-07-06T12:00:12Z" finished-at="2015-07-06T12:00:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- smoketests.SuccessfulLogin -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+>>>>>>> 74be61a9a245fc92608c083f225e853eb784c46a
 </testng-results>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite verbose="0" name="Failed suite [Default suite]">
   <test name="Default test(failed)" preserve-order="false">
     <classes>
@@ -12,3 +13,18 @@
     </classes>
   </test>
 </suite>
+=======
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="smoketests.SuccessfulLogin">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="successfulLoginTest"/>
+        </methods>
+      </class> <!-- smoketests.SuccessfulLogin -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
+>>>>>>> 74be61a9a245fc92608c083f225e853eb784c46a

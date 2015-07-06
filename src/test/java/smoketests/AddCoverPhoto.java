@@ -30,7 +30,7 @@ public class AddCoverPhoto {
 	public void testAddCoverPhoto(){
 		//Login to the webpage.
 		Login loginPageObject = new Login(driver);
-		loginPageObject.loginToPage();
+		loginPageObject.successfulLogin();
 		
 		//Navigate to the facebook URL.
 		loginPageObject.navigateToFacebook();
