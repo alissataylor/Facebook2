@@ -23,7 +23,7 @@ public class Profile {
 	//objects on the page below; defining the local Object Repository.
 	
 	//Instantiate a reference driver.
-	WebDriver driver = new FirefoxDriver();
+	private WebDriver driver;
 	
 	//Declaration of objects.
 	@FindBy(className = "_30w0 _50f7")
@@ -49,7 +49,7 @@ public class Profile {
 	
 	//Method that accepts a driver object and initializes/applies
 	//all the WebElements to the driver.
-	public void initProfile(WebDriver driver){
+	public Profile(WebDriver driver){
 		
 		//Declares the driver passed in via argument
 		//as the local driver to initialize all the page objects.

@@ -1,5 +1,7 @@
 package login;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -21,7 +23,7 @@ public class Login {
 	//objects on the page below; defining the local Object Repository.
 	
 	//Instantiate a reference driver.
-	WebDriver driver = new FirefoxDriver();
+	private WebDriver driver;
 
 	@FindBy(id = "email")
 	WebElement txtLoginEmail;
@@ -34,8 +36,9 @@ public class Login {
 	
 	
 	//Defining all the methods applicable to the Profile PageObject.
-
-	public void initLogin(WebDriver driver) {
+	
+	//Constructor for the Login PageObject; applies all the web elements and methods to the driver.
+	public Login(WebDriver driver) {
 		//Declares the driver passed in via argument
 		// as the local driver to initialize all the page objects.
 		this.driver = driver;
@@ -44,14 +47,17 @@ public class Login {
 		PageFactory.initElements(driver, this);
 	}
 	
+	//Enter in the username value.
 	public void inputUsername(){
 		txtLoginEmail.sendKeys("alissa.taylor@orasi.com");
 	}
 	
+	//Enter in the password value.
 	public void inputPassword(){
 		txtPassword.sendKeys("Orasi2");
 	}
 	
+	//Click the 'Login' button.
 	public void clickLoginButton(){
 		btnLogin.click();
 	}
@@ -62,6 +68,35 @@ public class Login {
 		inputUsername();
 		inputPassword();
 		clickLoginButton();
+	}
+	
+	//Navigate to the facebook URL.
+	public void navigateToFacebook(){
+		driver.get("https://www.facebook.com/");
+	}
+	
+	//Verify successful navigation/page loaded.
+	public boolean verifyNavigation(){
+		
+		//Variable declaration to be used in the for loop.
+		boolean isLoaded = false;
+		int waitCount;
+		int waitCountCap = 10;
+		
+		//Loop statement to wait for navigation verification.
+		for(waitCount = 0; waitCountCap > waitCount; waitCount++){
+			
+			//Check to see if the 'Login' button is displayed, if so,
+			//we can say the page has successfully loaded.
+			if(btnLogin.isDisplayed()){
+				isLoaded = true;
+				break;
+			}else{
+				driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+			}
+			
+		}
+		return isLoaded;
 	}
 
 }
