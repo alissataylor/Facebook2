@@ -55,19 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<<<<<<< HEAD
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 02 14:52:32 EDT 2015</td>
+<td>Started on:</td><td>Mon Jul 06 18:25:59 EDT 2015</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (677 ms)</td>
-=======
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
-</tr><tr>
-<td>Started on:</td><td>Mon Jul 06 12:00:06 EDT 2015</td>
-</tr>
-<tr><td>Total time:</td><td>6 seconds (6806 ms)</td>
->>>>>>> 74be61a9a245fc92608c083f225e853eb784c46a
+<tr><td>Total time:</td><td>6 seconds (6349 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,30 +67,25 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<<<<<<< HEAD
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-=======
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
->>>>>>> 74be61a9a245fc92608c083f225e853eb784c46a
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<<<<<<< HEAD
 <td title='smoketests.AddCoverPhoto.testAddCoverPhoto()'><b>testAddCoverPhoto</b><br>Test class: smoketests.AddCoverPhoto</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;email&quot;}
-Command duration or timeout: 25 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+<td><div><pre>org.openqa.selenium.InvalidSelectorException: The given selector _30vz img sp_rkVHzsNvFLc sx_7c09b5 is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: Compound class names not permitted
+Command duration or timeout: 39 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
 Build info: version: &apos;2.46.0&apos;, revision: &apos;61506a4624b13675f24581e453592342b7485d71&apos;, time: &apos;2015-06-04 10:22:50&apos;
 System info: host: &apos;GSOD-JMARTIN&apos;, ip: &apos;10.238.242.157&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_40&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=38.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 15002454-bfc5-42ac-a03d-72e8f78f27e6
-*** Element info: {Using=id, value=email}
+Session ID: a35b04e2-de2f-4eea-9228-f3f8bcdf5089
+*** Element info: {Using=class name, value=_30vz img sp_rkVHzsNvFLc sx_7c09b5}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -107,15 +94,14 @@ Session ID: 15002454-bfc5-42ac-a03d-72e8f78f27e6
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:399)
-	at org.openqa.selenium.By$ById.findElement(By.java:215)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:439)
+	at org.openqa.selenium.By$ByClassName.findElement(By.java:388)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy5.sendKeys(Unknown Source)
-	at login.Login.inputUsername(Login.java:52)
-	at login.Login.loginToPage(Login.java:68)
-	at smoketests.AddCoverPhoto.testAddCoverPhoto(AddCoverPhoto.java:33)
+	at com.sun.proxy.$Proxy5.click(Unknown Source)
+	at profile.Profile.clickAddCoverPhotoButton(Profile.java:74)
+	at smoketests.AddCoverPhoto.testAddCoverPhoto(AddCoverPhoto.java:53)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -141,26 +127,29 @@ Session ID: 15002454-bfc5-42ac-a03d-72e8f78f27e6
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:203)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:174)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;email&quot;}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Caused by: org.openqa.selenium.InvalidSelectorException: The given selector _30vz img sp_rkVHzsNvFLc sx_7c09b5 is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: Compound class names not permitted
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
 Build info: version: &apos;2.46.0&apos;, revision: &apos;61506a4624b13675f24581e453592342b7485d71&apos;, time: &apos;2015-06-04 10:22:50&apos;
 System info: host: &apos;GSOD-JMARTIN&apos;, ip: &apos;10.238.242.157&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_40&apos;
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous259761428149053884webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10299)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous259761428149053884webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10308)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous259761428149053884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12282)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous259761428149053884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12287)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous259761428149053884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12229)
-</pre></div><a href='#' onClick='toggleBox("stack-trace30736386", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace30736386'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"email"}
-Command duration or timeout: 25 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+	at &lt;anonymous class&gt;.FirefoxDriver.annotateInvalidSelectorError_(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10273)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10304)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10308)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12282)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12287)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12229)
+</pre></div><a href='#' onClick='toggleBox("stack-trace20962254", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace20962254'><pre>org.openqa.selenium.InvalidSelectorException: The given selector _30vz img sp_rkVHzsNvFLc sx_7c09b5 is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: Compound class names not permitted
+Command duration or timeout: 39 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
 Build info: version: '2.46.0', revision: '61506a4624b13675f24581e453592342b7485d71', time: '2015-06-04 10:22:50'
 System info: host: 'GSOD-JMARTIN', ip: '10.238.242.157', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_40'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=38.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 15002454-bfc5-42ac-a03d-72e8f78f27e6
-*** Element info: {Using=id, value=email}
+Session ID: a35b04e2-de2f-4eea-9228-f3f8bcdf5089
+*** Element info: {Using=class name, value=_30vz img sp_rkVHzsNvFLc sx_7c09b5}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -169,15 +158,14 @@ Session ID: 15002454-bfc5-42ac-a03d-72e8f78f27e6
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:399)
-	at org.openqa.selenium.By$ById.findElement(By.java:215)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:439)
+	at org.openqa.selenium.By$ByClassName.findElement(By.java:388)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy5.sendKeys(Unknown Source)
-	at login.Login.inputUsername(Login.java:52)
-	at login.Login.loginToPage(Login.java:68)
-	at smoketests.AddCoverPhoto.testAddCoverPhoto(AddCoverPhoto.java:33)
+	at com.sun.proxy.$Proxy5.click(Unknown Source)
+	at profile.Profile.clickAddCoverPhotoButton(Profile.java:74)
+	at smoketests.AddCoverPhoto.testAddCoverPhoto(AddCoverPhoto.java:53)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -203,25 +191,21 @@ Session ID: 15002454-bfc5-42ac-a03d-72e8f78f27e6
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:203)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:174)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"email"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Caused by: org.openqa.selenium.InvalidSelectorException: The given selector _30vz img sp_rkVHzsNvFLc sx_7c09b5 is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: Compound class names not permitted
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
 Build info: version: '2.46.0', revision: '61506a4624b13675f24581e453592342b7485d71', time: '2015-06-04 10:22:50'
 System info: host: 'GSOD-JMARTIN', ip: '10.238.242.157', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_40'
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous259761428149053884webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10299)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous259761428149053884webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10308)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous259761428149053884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12282)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous259761428149053884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12287)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous259761428149053884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12229)
+	at &lt;anonymous class&gt;.FirefoxDriver.annotateInvalidSelectorError_(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10273)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10304)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10308)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12282)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12287)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12229)
 </pre></div></td>
-<td>0</td>
+<td>5</td>
 <td>smoketests.AddCoverPhoto@1154ccd</td></tr>
-=======
-<td title='smoketests.SuccessfulLogin.successfulLoginTest()'><b>successfulLoginTest</b><br>Test class: smoketests.SuccessfulLogin</td>
-<td></td>
-<td>4</td>
-<td>smoketests.SuccessfulLogin@8f2ef19</td></tr>
->>>>>>> 74be61a9a245fc92608c083f225e853eb784c46a
 </table><p>
 </body>
 </html>

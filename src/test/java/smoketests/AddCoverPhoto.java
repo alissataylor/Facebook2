@@ -1,5 +1,6 @@
 package smoketests;
 
+import homepage.Homepage;
 import login.Login;
 import profile.Profile;
 
@@ -28,17 +29,28 @@ public class AddCoverPhoto {
 	@Test
 	//Test scenario for adding a cover photo.
 	public void testAddCoverPhoto(){
-		//Login to the webpage.
+		//Instantiate the Login object.
 		Login loginPageObject = new Login(driver);
-		loginPageObject.successfulLogin();
 		
 		//Navigate to the facebook URL.
 		loginPageObject.navigateToFacebook();
-		Assert.assertTrue(true, "Successfully navigated to the the following URL: https://www.facebook.com/");
+		Assert.assertTrue(loginPageObject.verifyNavigation(), "Successfully navigated to the the following URL: https://www.facebook.com/");
+		
+		//Login to the webpage.
+		loginPageObject.successfulLogin();
+		
+		//Instantiate the Homepage object.
+		Homepage homepagePageObject = new Homepage(driver);
+		
+		//Verify we are logged in via the Homepage is displayed.
+		homepagePageObject.verifyHomepageDisplayed();
+		
+		//Navigate to the Profile page.
+		homepagePageObject.clickProfileButton();
 		
 		//Click the 'Update Cover Photo' button.
-		//Profile profilePageObject = new Profile(driver);
-		//profilePageObject.clickAddCoverPhotoButton();
+		Profile profilePageObject = new Profile(driver);
+		profilePageObject.clickAddCoverPhotoButton();
 		
 		//Click the 'Choose From My Photos' button.
 		

@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="677" started-at="2015-07-02T14:52:32Z" finished-at="2015-07-02T14:52:33Z">
+  <suite name="Default suite" duration-ms="6349" started-at="2015-07-06T18:25:59Z" finished-at="2015-07-06T18:26:05Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="677" started-at="2015-07-02T14:52:32Z" finished-at="2015-07-02T14:52:33Z">
+    <test name="Default test" duration-ms="6349" started-at="2015-07-06T18:25:59Z" finished-at="2015-07-06T18:26:05Z">
       <class name="smoketests.AddCoverPhoto">
-        <test-method status="FAIL" signature="testAddCoverPhoto()" name="testAddCoverPhoto" duration-ms="56" started-at="2015-07-02T14:52:32Z" finished-at="2015-07-02T14:52:32Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="testAddCoverPhoto()" name="testAddCoverPhoto" duration-ms="5547" started-at="2015-07-06T18:25:59Z" finished-at="2015-07-06T18:26:04Z">
+          <exception class="org.openqa.selenium.InvalidSelectorException">
             <message>
-              <![CDATA[Unable to locate element: {"method":"id","selector":"email"}
-Command duration or timeout: 25 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[The given selector _30vz img sp_rkVHzsNvFLc sx_7c09b5 is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: Compound class names not permitted
+Command duration or timeout: 39 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
 Build info: version: '2.46.0', revision: '61506a4624b13675f24581e453592342b7485d71', time: '2015-06-04 10:22:50'
 System info: host: 'GSOD-JMARTIN', ip: '10.238.242.157', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_40'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=38.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 15002454-bfc5-42ac-a03d-72e8f78f27e6
-*** Element info: {Using=id, value=email}]]>
+Session ID: a35b04e2-de2f-4eea-9228-f3f8bcdf5089
+*** Element info: {Using=class name, value=_30vz img sp_rkVHzsNvFLc sx_7c09b5}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"email"}
-Command duration or timeout: 25 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.InvalidSelectorException: The given selector _30vz img sp_rkVHzsNvFLc sx_7c09b5 is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: Compound class names not permitted
+Command duration or timeout: 39 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
 Build info: version: '2.46.0', revision: '61506a4624b13675f24581e453592342b7485d71', time: '2015-06-04 10:22:50'
 System info: host: 'GSOD-JMARTIN', ip: '10.238.242.157', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_40'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=38.0.5, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 15002454-bfc5-42ac-a03d-72e8f78f27e6
-*** Element info: {Using=id, value=email}
+Session ID: a35b04e2-de2f-4eea-9228-f3f8bcdf5089
+*** Element info: {Using=class name, value=_30vz img sp_rkVHzsNvFLc sx_7c09b5}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -39,15 +40,14 @@ Session ID: 15002454-bfc5-42ac-a03d-72e8f78f27e6
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:399)
-	at org.openqa.selenium.By$ById.findElement(By.java:215)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:439)
+	at org.openqa.selenium.By$ByClassName.findElement(By.java:388)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy5.sendKeys(Unknown Source)
-	at login.Login.inputUsername(Login.java:52)
-	at login.Login.loginToPage(Login.java:68)
-	at smoketests.AddCoverPhoto.testAddCoverPhoto(AddCoverPhoto.java:33)
+	at com.sun.proxy.$Proxy5.click(Unknown Source)
+	at profile.Profile.clickAddCoverPhotoButton(Profile.java:74)
+	at smoketests.AddCoverPhoto.testAddCoverPhoto(AddCoverPhoto.java:53)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -73,48 +73,25 @@ Session ID: 15002454-bfc5-42ac-a03d-72e8f78f27e6
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:203)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:174)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"email"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Caused by: org.openqa.selenium.InvalidSelectorException: The given selector _30vz img sp_rkVHzsNvFLc sx_7c09b5 is either invalid or does not result in a WebElement. The following error occurred:
+InvalidSelectorError: Compound class names not permitted
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
 Build info: version: '2.46.0', revision: '61506a4624b13675f24581e453592342b7485d71', time: '2015-06-04 10:22:50'
 System info: host: 'GSOD-JMARTIN', ip: '10.238.242.157', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_40'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous259761428149053884webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10299)
-	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous259761428149053884webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10308)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous259761428149053884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12282)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous259761428149053884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12287)
-	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous259761428149053884webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12229)
+	at <anonymous class>.FirefoxDriver.annotateInvalidSelectorError_(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10273)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10304)
+	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10308)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12282)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12287)
+	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///C:/Users/JOHN~1.MAR/AppData/Local/Temp/anonymous1818569596735081104webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12229)
 ]]>
             </full-stacktrace>
           </exception>
         </test-method>
-        <test-method status="PASS" signature="tearDown()" name="tearDown" is-config="true" duration-ms="606" started-at="2015-07-02T14:52:32Z" finished-at="2015-07-02T14:52:33Z">
+        <test-method status="PASS" signature="tearDown()" name="tearDown" is-config="true" duration-ms="785" started-at="2015-07-06T18:26:04Z" finished-at="2015-07-06T18:26:05Z">
         </test-method>
       </class>
     </test>
   </suite>
-=======
-<testng-results skipped="0" failed="0" total="1" passed="1">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Default suite" duration-ms="6806" started-at="2015-07-06T16:00:06Z" finished-at="2015-07-06T16:00:13Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="6806" started-at="2015-07-06T16:00:06Z" finished-at="2015-07-06T16:00:13Z">
-      <class name="smoketests.SuccessfulLogin">
-        <test-method status="PASS" signature="setup()[pri:0, instance:smoketests.SuccessfulLogin@8f2ef19]" name="setup" is-config="true" duration-ms="1252" started-at="2015-07-06T12:00:06Z" finished-at="2015-07-06T12:00:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="successfulLoginTest()[pri:0, instance:smoketests.SuccessfulLogin@8f2ef19]" name="successfulLoginTest" duration-ms="4490" started-at="2015-07-06T12:00:08Z" finished-at="2015-07-06T12:00:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- successfulLoginTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:smoketests.SuccessfulLogin@8f2ef19]" name="teardown" is-config="true" duration-ms="1053" started-at="2015-07-06T12:00:12Z" finished-at="2015-07-06T12:00:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- smoketests.SuccessfulLogin -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
->>>>>>> 74be61a9a245fc92608c083f225e853eb784c46a
 </testng-results>

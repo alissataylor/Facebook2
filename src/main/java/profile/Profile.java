@@ -26,7 +26,7 @@ public class Profile {
 	private WebDriver driver;
 	
 	//Declaration of objects.
-	@FindBy(className = "_30w0 _50f7")
+	@FindBy(className = "_30vz img sp_rkVHzsNvFLc sx_7c09b5")
 	WebElement btnAddCoverPhoto;
 	
 	@FindBy(className = "mrs img sp_oPs6x6QGeVT sx_7498dc")
