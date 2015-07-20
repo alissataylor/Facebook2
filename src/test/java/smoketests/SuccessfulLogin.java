@@ -25,6 +25,7 @@ public class SuccessfulLogin {
 	
 	@AfterTest
 	public void teardown() {
-		shoebox.close();
+		shoebox.quit();
+		
 	}
 }

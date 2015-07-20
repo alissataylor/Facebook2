@@ -32,7 +32,7 @@ public class Login {
 	@FindBy(id = "u_0_x")
 	private WebElement btnLogin;
 
-	// Method to accept a driver.
+	// Constructor
 	public Login(WebDriver browser) {
 		this.driver = browser;
 		PageFactory.initElements(browser, this);
