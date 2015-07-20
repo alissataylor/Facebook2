@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="smoketests.SuccessfulLogin">
         <methods>
           <include name="teardown"/>
@@ -10,6 +11,14 @@
           <include name="successfulLoginTest"/>
         </methods>
       </class> <!-- smoketests.SuccessfulLogin -->
+=======
+      <class name="smoketests.Logout">
+        <methods>
+          <include name="LogoutTest"/>
+          <include name="Login"/>
+        </methods>
+      </class> <!-- smoketests.Logout -->
+>>>>>>> 534416816dd579e08f6d2b46731f29e48befc0a2
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

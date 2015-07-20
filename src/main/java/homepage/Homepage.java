@@ -4,6 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.Reporter;
 
 /*
  * @Author John Martin
@@ -13,6 +17,9 @@ import org.openqa.selenium.support.PageFactory;
  * <Date>			<Author>		<Change Made>
  * 07/06/2015		John Martin		Added btnPrivacySettings, constructor, and verifyHomepageDisplayed method.
  */
+
+
+
 public class Homepage {
 	
 	//Instantiating a local webdriver and declaring all the 
@@ -28,6 +35,15 @@ public class Homepage {
 	@FindBy(className = "_2dpb")
 	WebElement btnProfile;
 	
+	@FindBy (id = "pageLoginAnchor")
+	private WebElement  drpDwnCarat;
+
+	@FindBy (xpath = "//li[@data-gt='{\"ref\":\"async_menu\",\"logout_menu_click\":\"menu_logout\"}']")
+	 private WebElement  drpDwnLogout;
+
+	@FindBy (xpath = ".//*[@id='u_0_e']")
+	private WebElement btnLoginConfirm;
+	
 	//Defining all the methods applicable to the Profile PageObject.
 	
 	//Method that accepts a driver object and initializes/applies
@@ -42,6 +58,15 @@ public class Homepage {
 		PageFactory.initElements(driver, this);
 	}
 	
+	public void CaratClicks(){
+		drpDwnCarat.click();
+	}
+
+	public void LogoutClicks(){
+		drpDwnLogout.click();
+	}
+
+	
 	//Verify the Homepage with verifying the Privacy Settings button.
 	public boolean verifyHomepageDisplayed(){
 		if(btnPrivacySettings.isDisplayed()){
@@ -54,6 +79,18 @@ public class Homepage {
 	//Click the Profile button.
 	public void clickProfileButton(){
 		btnProfile.click();
+		
+	}
+	
+	public void ConfirmLogout(){
+		Assert.assertTrue(btnLoginConfirm.isDisplayed(),"Does NOT return to the Login Page!!!<br>");
+		Reporter.log("Facebook Login Page Displays<br>");
 	}
 
+	public void FacebookLogout(){
+		CaratClicks();
+		LogoutClicks();
+		Reporter.log("User Successfully Logs Out of Facebook!<br>");
+		ConfirmLogout();
+	}
 }
