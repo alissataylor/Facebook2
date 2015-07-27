@@ -51,15 +51,14 @@ public void LogoutClicks(){
 }
 
 
-public void ConfirmLogout(){
-	Assert.assertTrue(btnLoginConfirm.isDisplayed(),"Does NOT return to the Login Page!!!<br>");
-	Reporter.log("Facebook Login Page Displays<br>");
-}
+
 
 public void FacebookLogout(){
 	CaratClicks();
 	LogoutClicks();
 	Reporter.log("User Successfully Logs Out of Facebook!<br>");
-	ConfirmLogout();
+	Assert.assertTrue(btnLoginConfirm.isDisplayed(),"Does NOT return to the Login Page!!!<br>");
+	Reporter.log("Facebook Login Page Displays<br>");
+
 }
 }
