@@ -2,6 +2,8 @@ package smoketests;
 
 import java.util.concurrent.TimeUnit;
 
+import login.Login;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,7 +20,7 @@ import homepage.Homepage;
 public class Logout  {
 
 	WebDriver driver;
-	
+/*	
 	@FindBy (id = "email")
 	public WebElement  strUsername;
 	
@@ -29,22 +31,33 @@ public class Logout  {
 	
 	@FindBy (xpath = ".//*[@id='u_0_x']")
 	public WebElement  btnLogIn;
+	*/
 	@BeforeTest
 	public void Login(){
-		
-		
-		 
-		driver = new FirefoxDriver();
-		
-		driver.get("https://www.facebook.com/");
+	/*	
 		 PageFactory.initElements(driver, this);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		strUsername.sendKeys("alissa.taylor@orasi.com");
+		 PageFactory.initElements(driver, this);
+		
+		 	strUsername.sendKeys("alissa.taylor@orasi.com");
 		strPassword.sendKeys("Orasi2");
 		btnLogIn.click();
+		 
+*/
 		
 		
 		
+		  		driver = new FirefoxDriver();
+		  		 driver.get("https://www.facebook.com/");
+		  	
+		 
+		
+		
+		
+	
+		
+		Login loginPage = new Login(driver);
+		loginPage.successfulLogin();
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		
 	}

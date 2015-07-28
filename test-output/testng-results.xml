@@ -8,16 +8,16 @@
       <![CDATA[Facebook Login Page Displays<br>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18418" started-at="2015-07-27T17:57:50Z" finished-at="2015-07-27T17:58:08Z">
+  <suite name="Default suite" duration-ms="15788" started-at="2015-07-28T16:02:47Z" finished-at="2015-07-28T16:03:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18418" started-at="2015-07-27T17:57:50Z" finished-at="2015-07-27T17:58:08Z">
+    <test name="Default test" duration-ms="15788" started-at="2015-07-28T16:02:47Z" finished-at="2015-07-28T16:03:03Z">
       <class name="smoketests.Logout">
-        <test-method status="PASS" signature="Login()[pri:0, instance:smoketests.Logout@649d209a]" name="Login" is-config="true" duration-ms="14877" started-at="2015-07-27T13:57:50Z" finished-at="2015-07-27T13:58:05Z">
+        <test-method status="PASS" signature="Login()[pri:0, instance:smoketests.Logout@649d209a]" name="Login" is-config="true" duration-ms="12639" started-at="2015-07-28T12:02:47Z" finished-at="2015-07-28T12:03:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="LogoutTest()[pri:0, instance:smoketests.Logout@649d209a]" name="LogoutTest" duration-ms="2862" started-at="2015-07-27T13:58:05Z" finished-at="2015-07-27T13:58:07Z">
+        <test-method status="PASS" signature="LogoutTest()[pri:0, instance:smoketests.Logout@649d209a]" name="LogoutTest" duration-ms="2398" started-at="2015-07-28T12:03:00Z" finished-at="2015-07-28T12:03:02Z">
           <reporter-output>
             <line>
               <![CDATA[User Successfully Logs Out of Facebook!<br>]]>
@@ -27,7 +27,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- LogoutTest -->
-        <test-method status="PASS" signature="EndTest()[pri:0, instance:smoketests.Logout@649d209a]" name="EndTest" is-config="true" duration-ms="662" started-at="2015-07-27T13:58:07Z" finished-at="2015-07-27T13:58:08Z">
+        <test-method status="PASS" signature="EndTest()[pri:0, instance:smoketests.Logout@649d209a]" name="EndTest" is-config="true" duration-ms="738" started-at="2015-07-28T12:03:02Z" finished-at="2015-07-28T12:03:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndTest -->
