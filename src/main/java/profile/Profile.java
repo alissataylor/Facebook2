@@ -1,5 +1,7 @@
 package profile;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -26,6 +28,9 @@ public class Profile {
 	private WebDriver driver;
 	
 	//Declaration of objects.
+	@FindBy(id = "fb-timeline-cover-name")
+	WebElement lblProfileName;
+	
 	@FindBy(className = "_30vz img sp_rkVHzsNvFLc sx_7c09b5")
 	WebElement btnAddCoverPhoto;
 	
@@ -59,6 +64,30 @@ public class Profile {
 		PageFactory.initElements(driver, this);
 	}
 	
+	//Verify successful navigation to the Profile page by
+	//verifying the name object on the Profile page is displayed.
+	public boolean verifyProfileDisplayed(){
+		// Variable declaration to be used in the for loop.
+		boolean isLoaded = false;
+		int waitCount;
+		int waitCountCap = 10;
+
+		// Loop statement to wait for navigation verification.
+		for (waitCount = 0; waitCountCap > waitCount; waitCount++) {
+
+			// Check to see if the 'Login' button is displayed, if so,
+			// we can say the page has successfully loaded.
+			if (lblProfileName.isDisplayed()) {
+				isLoaded = true;
+				break;
+			} else {
+				driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+			}
+
+		}
+		return isLoaded;
+	}
+	
 	//Click the 'Choose From My Photos' button in the dropdown menu.
 	public void clickChoosePhotoButton(){
 		btnChoosePhoto.click();
@@ -79,7 +108,7 @@ public class Profile {
 		imgPhotoAlbum.click();
 	}
 	
-	//Click the image for the Photo Album.
+	//Click the image for the Photo.
 	public void clickCoverPhotoImage(){
 		imgCoverPhoto.click();
 	}

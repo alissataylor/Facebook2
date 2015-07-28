@@ -7,6 +7,7 @@ import profile.Profile;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -32,9 +33,10 @@ public class AddCoverPhoto {
 		//Instantiate the Login object.
 		Login loginPageObject = new Login(driver);
 		
-		//Navigate to the facebook URL.
+		//Navigate to the facebook URL and verify successful navigation.
 		loginPageObject.navigateToFacebook();
-		Assert.assertTrue(loginPageObject.verifyNavigation(), "Successfully navigated to the the following URL: https://www.facebook.com/");
+		Assert.assertTrue(loginPageObject.verifyNavigation(), "Unable to successfully verify navigation to the Facebook login page; please investigate.");
+		Reporter.log("Successfully navigated to the Facebook login page.<br><br>");
 		
 		//Login to the webpage.
 		loginPageObject.successfulLogin();
@@ -43,28 +45,41 @@ public class AddCoverPhoto {
 		Homepage homepagePageObject = new Homepage(driver);
 		
 		//Verify we are logged in via the Homepage is displayed.
-		homepagePageObject.verifyHomepageDisplayed();
+		Assert.assertTrue(homepagePageObject.verifyHomepageDisplayed(), "Unable to verify a successful login/navigation to the Homepage page; please investigate.");
+		Reporter.log("Successfully logged into Facebook.<br><br>");
+		Reporter.log("Successfully navigated to the Homepage page.<br><br>");
 		
 		//Navigate to the Profile page.
 		homepagePageObject.clickProfileButton();
 		
-		//Click the 'Update Cover Photo' button.
+		//Verify successful navigation to the Profile page.
 		Profile profilePageObject = new Profile(driver);
+		Assert.assertTrue(profilePageObject.verifyProfileDisplayed(), "Unable to verify a navigation to the Profile page; please investigate.");
+		Reporter.log("Successfully navigated to the Profile page.<br><br>");
+		
+		//Click the 'Update Cover Photo' button.
 		profilePageObject.clickAddCoverPhotoButton();
 		
 		//Click the 'Choose From My Photos' button.
+		profilePageObject.clickChoosePhotoButton();
 		
 		//Click the 'Photo Albums' link.
+		profilePageObject.clickPhotoAlbumsLink();
 		
 		//Select the Photo Album.
+		profilePageObject.clickPhotoAlbumImage();
 		
 		//Select the Photo to be added as a cover photo.
+		profilePageObject.clickCoverPhotoImage();
+		
+		//Select the 'Save' button.
+		profilePageObject.clickSaveButton();
 	}
 
 	@AfterTest
 	//Method to tear everything down.
 	public void tearDown(){
-		driver.quit();
+		driver.close();
 	}
 	
 }
