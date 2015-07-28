@@ -17,32 +17,23 @@ import org.testng.annotations.Test;
 
 import homepage.Homepage;
 
+/*
+ *  @Author Andy Williams
+ *  @Summary Created Log Out Test
+ *  @Date
+ *  Change Log
+ *  <Date>				<Author>		<Change Made>
+ *  06/23/2015 			Andy Williams	Initiated Logout Test
+ *  07/28/2015			Andy Williams	Updated with Java Doc Format
+ */
+
 public class Logout  {
 
 	WebDriver driver;
-/*	
-	@FindBy (id = "email")
-	public WebElement  strUsername;
-	
-	
-	@FindBy (id = "pass")
-	public WebElement strPassword;
-	
-	
-	@FindBy (xpath = ".//*[@id='u_0_x']")
-	public WebElement  btnLogIn;
-	*/
+
 	@BeforeTest
 	public void Login(){
-	/*	
-		 PageFactory.initElements(driver, this);
-		 PageFactory.initElements(driver, this);
-		
-		 	strUsername.sendKeys("alissa.taylor@orasi.com");
-		strPassword.sendKeys("Orasi2");
-		btnLogIn.click();
-		 
-*/
+	
 		
 		
 		
