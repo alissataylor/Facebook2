@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -27,48 +28,38 @@ import homepage.Homepage;
  *  07/28/2015			Andy Williams	Updated with Java Doc Format
  */
 
-public class Logout  {
+public class Logout {
 
-	WebDriver driver;
+	WebDriver driver = new FirefoxDriver();
 
 	@BeforeTest
-	public void Login() throws InterruptedException{
-	
-		
-		
-		
-		  		driver = new FirefoxDriver();
-		  		 driver.get("https://www.facebook.com/");
-		  	
-		 
-		
-		
-		
-	
-		
+	public void setup() {
+		Homepage homepage = new Homepage(driver);
+		homepage.GetURL();
+		homepage.TimeOut();
 		Login loginPage = new Login(driver);
 		loginPage.successfulLogin();
-		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
-		
 	}
-	
+
 	@Test
-	public void LogoutTest(){
-	
+	public void LogoutTest() {
+
+		Homepage homepage = new Homepage(driver);
+		Assert.assertTrue(homepage.ConfirmLogout(),"Does NOT return to the Login Page!!!<br>");
+		Reporter.log("User Successfully Logs Out of Facebook!<br>");
 		Homepage logout = new Homepage(driver);
 		logout.FacebookLogout();
-		
+		Reporter.log("Facebook Login Page Displays<br>");
 	}
-	
+
 	/*
 	 * Close browser before each new test
 	 */
-	
+
 	@AfterTest
-	public void EndTest(){
+	public void EndTest() {
 		driver.getCurrentUrl();
-		driver.quit(); 
+		driver.quit();
 	}
-	
+
 }

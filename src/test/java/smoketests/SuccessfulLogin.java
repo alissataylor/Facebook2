@@ -10,6 +10,7 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
 /*
  *  @Author Andy Williams
  *  @Summary Login Test
@@ -23,26 +24,28 @@ import org.testng.annotations.Test;
 public class SuccessfulLogin {
 
 	WebDriver driver = new FirefoxDriver();
-	
-	
-			
+
 	@BeforeTest
 	public void setup() {
-		driver.get("http://www.facebook.com");
+		Homepage homepage = new Homepage(driver);
+		homepage.GetURL();
+		homepage.TimeOut();
 	}
-	
+
 	@Test
 	public void successfulLoginTest() {
 		Login loginPage = new Login(driver);
+		loginPage.successfulLogin();
+		Homepage homepage = new Homepage(driver);
+		Assert.assertTrue("Home Page doesn't display!",homepage.homePageDisplays());
+		Reporter.log("User logged into Home Page Successfully!!!");
 		
-		 loginPage.successfulLogin();
-		 Reporter.log("User logged into Home Page Successfully!!!");
-	
+
 	}
-	
+
 	@AfterTest
-	public void EndTest(){
-		driver.getCurrentUrl();
-		driver.quit(); 
+	public void teardown() {
+		driver.quit();
+
 	}
 }

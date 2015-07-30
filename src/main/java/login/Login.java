@@ -22,10 +22,10 @@ import org.testng.Reporter;
 
 public class Login {
 
-	// Creating web objects.
-	// ### Example: WebElement txtUsername1 =
-	// driver.findElement(By.id("email"));
-
+	// ----------------------------------------------------
+	// 		Variable Declaration/Object Repository
+	// ----------------------------------------------------
+	
 	WebDriver driver;
 	Homepage homepage;
 	
@@ -43,13 +43,28 @@ public class Login {
 	@FindBy(id = "u_0_x")
 	private WebElement btnLogin;
 
-	// Method to accept a driver.
-	public Login(WebDriver browser) {
-		this.driver = browser;
-		PageFactory.initElements(browser, this);
+
+	// ----------------------------------------------------
+	// 					Class Constructor
+	// ----------------------------------------------------
+
+	// Constructor
+	public Login(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 	
+
+	// ----------------------------------------------------
+	// 			Methods, Actions, & Calculations
+	// ----------------------------------------------------
+
+	// Navigating to facebook.
+	public void navigateToFacebook() {
+		driver.get("http://www.facebook.com");
+
+	}
 
 	// Entering the username into the username field.
 	public void enterUsername() {
@@ -71,14 +86,14 @@ public class Login {
 
 	
 
+
 	// Method for a successful login.
 	public void successfulLogin()  {
 		enterUsername();
 		enterPassword();
 		clickLogin();
 		
-		Homepage homepage = new Homepage(driver);
-		homepage.homePageDisplays();
+		
 		
 		
 	}

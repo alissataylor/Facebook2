@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="smoketests.SuccessfulLogin">
+      <class name="smoketests.Logout">
         <methods>
-          <include name="EndTest"/>
+          <include name="LogoutTest"/>
           <include name="setup"/>
-          <include name="successfulLoginTest"/>
         </methods>
-      </class> <!-- smoketests.SuccessfulLogin -->
+      </class> <!-- smoketests.Logout -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
