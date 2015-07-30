@@ -3,22 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="smoketests.SuccessfulLogin">
+      <class name="smoketests.AddAStatus">
         <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-          <include name="successfulLoginTest"/>
+          <include name="testPostStatus"/>
+          <include name="FacebookLogout"/>
         </methods>
-      </class> <!-- smoketests.SuccessfulLogin -->
-=======
-      <class name="smoketests.Logout">
-        <methods>
-          <include name="LogoutTest"/>
-          <include name="Login"/>
-        </methods>
-      </class> <!-- smoketests.Logout -->
->>>>>>> 534416816dd579e08f6d2b46731f29e48befc0a2
+      </class> <!-- smoketests.AddAStatus -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

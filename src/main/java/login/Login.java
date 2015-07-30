@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.Reporter;
 
 /*
  * @Author Group
@@ -17,10 +19,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Login {
 
-	// Creating web objects.
-	// ### Example: WebElement txtUsername1 =
-	// driver.findElement(By.id("email"));
-
+	// ----------------------------------------------------
+	// 		Variable Declaration/Object Repository
+	// ----------------------------------------------------
+	
 	WebDriver driver;
 
 	@FindBy(id = "email")
@@ -32,10 +34,25 @@ public class Login {
 	@FindBy(id = "u_0_x")
 	private WebElement btnLogin;
 
+
+	// ----------------------------------------------------
+	// 					Class Constructor
+	// ----------------------------------------------------
+
 	// Constructor
 	public Login(WebDriver browser) {
 		this.driver = browser;
 		PageFactory.initElements(browser, this);
+	}
+
+	// ----------------------------------------------------
+	// 			Methods, Actions, & Calculations
+	// ----------------------------------------------------
+
+	// Navigating to facebook.
+	public void navigateToFacebook() {
+		driver.get("http://www.facebook.com");
+
 	}
 
 	// Entering the username into the username field.
@@ -52,6 +69,7 @@ public class Login {
 	public void clickLogin() {
 		btnLogin.click();
 	}
+
 
 	// Method for a successful login.
 	public void successfulLogin() {
