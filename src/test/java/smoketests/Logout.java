@@ -32,7 +32,7 @@ public class Logout  {
 	WebDriver driver;
 
 	@BeforeTest
-	public void Login(){
+	public void Login() throws InterruptedException{
 	
 		
 		

@@ -1,10 +1,14 @@
 package login;
 
+import homepage.Homepage;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.Reporter;
 
 /*
  * @Author Group
@@ -13,6 +17,7 @@ import org.openqa.selenium.support.PageFactory;
  * Change Log:
  * <Date>			<Author>		<Change Made>
  * 06/30/2015		Group    		Added login objects.
+ * 07/28/2015		Andy Williams	Added Assertion in the form of the homePageDisplayed() Method. This is inherited from the homepage class
  */
 
 public class Login {
@@ -22,6 +27,12 @@ public class Login {
 	// driver.findElement(By.id("email"));
 
 	WebDriver driver;
+	Homepage homepage;
+	
+	
+	
+	
+	
 
 	@FindBy(id = "email")
 	private WebElement txtUsername;
@@ -37,11 +48,15 @@ public class Login {
 		this.driver = browser;
 		PageFactory.initElements(browser, this);
 	}
+	
+	
 
 	// Entering the username into the username field.
 	public void enterUsername() {
+		
 		txtUsername.sendKeys("alissa.taylor@orasi.com");
 	}
+	
 
 	// Entering the password into the password field.
 	public void enterPassword() {
@@ -52,12 +67,20 @@ public class Login {
 	public void clickLogin() {
 		btnLogin.click();
 	}
+	
+
+	
 
 	// Method for a successful login.
-	public void successfulLogin() {
+	public void successfulLogin()  {
 		enterUsername();
 		enterPassword();
 		clickLogin();
+		
+		Homepage homepage = new Homepage(driver);
+		homepage.homePageDisplays();
+		
+		
 	}
 
 	// Method for an unsuccessful login.

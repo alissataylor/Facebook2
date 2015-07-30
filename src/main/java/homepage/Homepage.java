@@ -1,7 +1,6 @@
 package homepage;
 
 import org.openqa.selenium.By;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,6 +16,7 @@ import org.testng.Reporter;
  *  Change Log
  *  <Date>				<Author>		<Change Made>
  *  06/23/2015			Andy Williams	Added Web Elements, Page Factory Constructor, CaratClicks(), LogoutClicks(), FacebookLogout()
+ *  07/28/2015			Andy Williams	Added homePageDisplays() 
  */
 
 public class Homepage {
@@ -51,6 +51,13 @@ public class Homepage {
 
 	public void LogoutClicks() {
 		drpDwnLogout.click();
+	}
+	
+	/*
+	 *  Add Home Page Verification 
+	 */
+	public void homePageDisplays(){
+		 Assert.assertTrue(drpDwnCarat.isDisplayed(), "Home Page Doesn't Display!!!");
 	}
 
 	public void FacebookLogout() {
