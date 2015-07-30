@@ -2,30 +2,36 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[User logged into Home Page Successfully!!!]]>
+      <![CDATA[User Successfully Logs Out of Facebook!<br>]]>
+    </line>
+    <line>
+      <![CDATA[Facebook Login Page Displays<br>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10616" started-at="2015-07-30T13:12:10Z" finished-at="2015-07-30T13:12:21Z">
+  <suite name="Default suite" duration-ms="18905" started-at="2015-07-30T15:19:16Z" finished-at="2015-07-30T15:19:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10616" started-at="2015-07-30T13:12:10Z" finished-at="2015-07-30T13:12:21Z">
-      <class name="smoketests.SuccessfulLogin">
-        <test-method status="PASS" signature="setup()[pri:0, instance:smoketests.SuccessfulLogin@8f2ef19]" name="setup" is-config="true" duration-ms="1612" started-at="2015-07-30T09:12:10Z" finished-at="2015-07-30T09:12:12Z">
+    <test name="Default test" duration-ms="18905" started-at="2015-07-30T15:19:16Z" finished-at="2015-07-30T15:19:35Z">
+      <class name="smoketests.Logout">
+        <test-method status="PASS" signature="Login()[pri:0, instance:smoketests.Logout@649d209a]" name="Login" is-config="true" duration-ms="15886" started-at="2015-07-30T11:19:16Z" finished-at="2015-07-30T11:19:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="successfulLoginTest()[pri:0, instance:smoketests.SuccessfulLogin@8f2ef19]" name="successfulLoginTest" duration-ms="8326" started-at="2015-07-30T09:12:12Z" finished-at="2015-07-30T09:12:20Z">
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="LogoutTest()[pri:0, instance:smoketests.Logout@649d209a]" name="LogoutTest" duration-ms="1917" started-at="2015-07-30T11:19:32Z" finished-at="2015-07-30T11:19:34Z">
           <reporter-output>
             <line>
-              <![CDATA[User logged into Home Page Successfully!!!]]>
+              <![CDATA[User Successfully Logs Out of Facebook!<br>]]>
+            </line>
+            <line>
+              <![CDATA[Facebook Login Page Displays<br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- successfulLoginTest -->
-        <test-method status="PASS" signature="EndTest()[pri:0, instance:smoketests.SuccessfulLogin@8f2ef19]" name="EndTest" is-config="true" duration-ms="660" started-at="2015-07-30T09:12:20Z" finished-at="2015-07-30T09:12:21Z">
+        </test-method> <!-- LogoutTest -->
+        <test-method status="PASS" signature="EndTest()[pri:0, instance:smoketests.Logout@649d209a]" name="EndTest" is-config="true" duration-ms="1087" started-at="2015-07-30T11:19:34Z" finished-at="2015-07-30T11:19:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndTest -->
-      </class> <!-- smoketests.SuccessfulLogin -->
+      </class> <!-- smoketests.Logout -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
