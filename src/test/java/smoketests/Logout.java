@@ -26,12 +26,14 @@ import homepage.Homepage;
  *  <Date>				<Author>		<Change Made>
  *  06/23/2015 			Andy Williams	Initiated Logout Test
  *  07/28/2015			Andy Williams	Updated with Java Doc Format
+ *  07/31/2015			Group			Code review changes.
  */
 
 public class Logout {
 
 	WebDriver driver = new FirefoxDriver();
 
+	//Calling parameters for test setup.
 	@BeforeTest
 	public void setup() {
 		Homepage homepage = new Homepage(driver);
@@ -41,9 +43,9 @@ public class Logout {
 		loginPage.successfulLogin();
 	}
 
+	//Logout test scenario.
 	@Test
 	public void LogoutTest() {
-
 		Homepage homepage = new Homepage(driver);
 		Assert.assertTrue(homepage.ConfirmLogout(),"Does NOT return to the Login Page!!!<br>");
 		Reporter.log("User Successfully Logs Out of Facebook!<br>");
@@ -51,11 +53,8 @@ public class Logout {
 		logout.FacebookLogout();
 		Reporter.log("Facebook Login Page Displays<br>");
 	}
-
-	/*
-	 * Close browser before each new test
-	 */
-
+	
+	//Close browser before each new test
 	@AfterTest
 	public void EndTest() {
 		driver.getCurrentUrl();

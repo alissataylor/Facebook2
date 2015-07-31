@@ -1,7 +1,5 @@
 package login;
 
-import homepage.Homepage;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +16,7 @@ import org.testng.Reporter;
  * <Date>			<Author>		<Change Made>
  * 06/30/2015		Group    		Added login objects.
  * 07/28/2015		Andy Williams	Added Assertion in the form of the homePageDisplayed() Method. This is inherited from the homepage class
+ * 07/31/2015		Group			Page object formatting and removal of homepage import.
  */
 
 public class Login {
@@ -27,12 +26,6 @@ public class Login {
 	// ----------------------------------------------------
 	
 	WebDriver driver;
-	Homepage homepage;
-	
-	
-	
-	
-	
 
 	@FindBy(id = "email")
 	private WebElement txtUsername;
@@ -42,7 +35,6 @@ public class Login {
 
 	@FindBy(id = "u_0_x")
 	private WebElement btnLogin;
-
 
 	// ----------------------------------------------------
 	// 					Class Constructor
@@ -54,8 +46,6 @@ public class Login {
 		PageFactory.initElements(driver, this);
 	}
 	
-	
-
 	// ----------------------------------------------------
 	// 			Methods, Actions, & Calculations
 	// ----------------------------------------------------
@@ -68,11 +58,9 @@ public class Login {
 
 	// Entering the username into the username field.
 	public void enterUsername() {
-		
 		txtUsername.sendKeys("alissa.taylor@orasi.com");
 	}
 	
-
 	// Entering the password into the password field.
 	public void enterPassword() {
 		txtPassword.sendKeys("Orasi2");
@@ -83,19 +71,11 @@ public class Login {
 		btnLogin.click();
 	}
 	
-
-	
-
-
 	// Method for a successful login.
 	public void successfulLogin()  {
 		enterUsername();
 		enterPassword();
-		clickLogin();
-		
-		
-		
-		
+		clickLogin();	
 	}
 
 	// Method for an unsuccessful login.
