@@ -66,4 +66,10 @@ public class Login {
 		clickLogin();
 	}
 
+	public void navigateToFacebook() {
+		driver.get("http://www.facebook.com");
+		// TODO Auto-generated method stub
+		
+	}
+
 }
